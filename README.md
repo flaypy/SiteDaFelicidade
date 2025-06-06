@@ -1,57 +1,94 @@
-<h1 align="center">🛒 Meu Site Bacana</h1>
+<h1 align="center">
+  🛒 Site da Felicidade
+</h1>
+
 <p align="center">
-  Sistema de vendas online desenvolvido em Django.
+  <strong>Um sistema completo de e-commerce desenvolvido com Python e Django.</strong>
 </p>
 
 <p align="center">
-  <img src="https://i.imgur.com/Be9FqyQ.png" alt="Screenshot do site" width="70%">
+  <em>Desenvolvido por: Kevin Flay Vieira de Oliveira</em>
+</p>
+
+<p align="center">
+  <img src="https://i.imgur.com/0Y7fw4Z.png" alt="Screenshot da tela inicial do site" width="80%">
 </p>
 
 ---
 
-## 🧠 Objetivo
+## 📋 Sobre o Projeto
 
-Este projeto foi desenvolvido para a disciplina **Desenvolvimento Web III** do curso de **Desenvolvimento de Software Multiplataforma**, com o intuito de aplicar conhecimentos em:
-
-- Django (Python)
-- Bootstrap 5
-- Consumo de APIs externas (FakeStore e ViaCEP)
-- Templates e herança de layout
-- Controle de sessão e autenticação
-- CRUD de usuários e produtos
-- Gráficos com Chart.js
+O **Meu Site Bacana** é uma plataforma de vendas online criada como projeto para a disciplina de Desenvolvimento Web III. O sistema simula um ambiente de e-commerce real, com funcionalidades de cadastro de produtos, gestão de usuários, carrinho de compras e um painel administrativo para visualização de métricas de vendas e estoque.
 
 ---
 
-## 🚀 Como executar o projeto
+## ✨ Funcionalidades Principais
 
---- Em todos os comandos se atentar a qual versão do python você tem instalada na sua máquina (python, python3 e py podem funcionar) ---
+* **Gestão de Usuários:** Sistema completo de CRUD (Criar, Ler, Atualizar, Excluir) para usuários.
+* **Autenticação:** Mecanismo de Login e Logout seguro com controle de sessão.
+* **Catálogo de Produtos:** CRUD completo para produtos, incluindo nome, descrição, preço, estoque e imagem.
+* **Página de Vendas:** Galeria de produtos com design responsivo, separando itens em destaque dos demais.
+* **Checkout Simplificado:** Processo de finalização de compra com formulário para dados de pagamento.
+* **Dashboard Administrativo:** Painel de controle para administradores com atalhos para as principais funcionalidades.
+* **Visualização de Dados:** Gráficos dinâmicos para análise de estoque e total de vendas por dia.
+* **Integração com API Externa:** Preenchimento automático de endereço no cadastro de usuário através da API ViaCEP.
 
-1. Crie um ambiente virtual:
+---
 
-   python3 -m venv ambienteVirtual<br>
-   ambienteVirtual\Scripts\activate
+## 🛠️ Tecnologias Utilizadas
 
-2. Instale as dependências:
- 
-   pip install django<br>
-   pip install pillow 
+O projeto foi construído utilizando as seguintes tecnologias:
 
+* **Backend:** Python, Django
+* **Frontend:** HTML5, CSS3, JavaScript
+* **Framework CSS:** Bootstrap 5
+* **Banco de Dados:** SQLite 3
+* **Visualização de Dados:** Chart.js
+* **Imagens:** Pillow
+* **API:** ViaCEP
 
-3. Aplique as migrações:
-  
-   python3 manage.py makemigrations<br>
-   python3 manage.py migrate
- 
+---
 
-4. Crie um superusuário (opcional, para acessar o admin):
-   
-   python3 manage.py createsuperuser
-   
+## 🚀 Como Executar o Projeto
 
-5. Rode o servidor:
-   
-   python3 manage.py runserver
-   
+Para rodar este projeto localmente, siga os passos abaixo. É recomendado o uso de um ambiente virtual.
 
-6. Acesse no navegador: `http://127.0.0.1:8000/`
+1.  **Clone o repositório (ou use os arquivos locais) e crie um ambiente virtual:**
+    ```bash
+    # Cria o ambiente virtual
+    python -m venv venv
+
+    # Ativa o ambiente (Windows)
+    .\venv\Scripts\activate
+
+    # Ativa o ambiente (Linux/Mac)
+    source venv/bin/activate
+    ```
+
+2.  **Instale as dependências necessárias:**
+    ```bash
+    pip install django pillow
+    ```
+
+3.  **Aplique as migrações do banco de dados:**
+    ```bash
+    python manage.py makemigrations
+    python manage.py migrate
+    ```
+
+4.  **Crie um superusuário para acessar o painel de administração:**
+    ```bash
+    python manage.py createsuperuser
+    ```
+    *Você precisará informar um nome de usuário, e-mail e senha.*
+
+5.  **Inicie o servidor de desenvolvimento:**
+    ```bash
+    python manage.py runserver
+    ```
+
+6.  **Acesse o projeto no seu navegador:**
+    * **Site:** `http://127.0.0.1:8000/`
+    * **Admin:** `http://127.0.0.1:8000/admin/`
+
+---
