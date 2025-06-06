@@ -18,7 +18,7 @@
 
 ## 📋 Sobre o Projeto
 
-O **Meu Site Bacana** é uma plataforma de vendas online criada como projeto para a disciplina de Desenvolvimento Web III. O sistema simula um ambiente de e-commerce real, com funcionalidades de cadastro de produtos, gestão de usuários, carrinho de compras e um painel administrativo para visualização de métricas de vendas e estoque.
+O **Site da Felicidade** é uma plataforma de vendas online criada como projeto para a disciplina de Desenvolvimento Web III. O sistema simula um ambiente de e-commerce real, com funcionalidades de cadastro de produtos, gestão de usuários, carrinho de compras e um painel administrativo para visualização de métricas de vendas e estoque.
 
 ---
 
