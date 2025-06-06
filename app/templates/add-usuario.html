@@ -1,17 +1,82 @@
 {% extends "template.html" %}
 
-{% block titulo %}
-  Novo Usuario
-{% endblock %}
+{% block titulo %} | Novo Usuário {% endblock %}
 
 {% block conteudo %}
+<div class="form-container">
+    <h2 class="text-center mb-4">Crie sua Conta</h2>
+    <p class="text-center text-muted mb-4">É rápido e fácil.</p>
 
-  <h1>Novo Usuário</h1>
+    <form method="post" action="{% url 'addUsuario' %}">
+        {% csrf_token %}
 
-  <form method="post" action="{% url 'addUsuario' %}">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Cadastrar">
-  </form>
+        <div class="mb-3">
+            <label class="form-label">{{ form.nome.label }}</label>
+            {{ form.nome }}
+        </div>
+        <div class="mb-3">
+            <label class="form-label">{{ form.email.label }}</label>
+            {{ form.email }}
+        </div>
+        <div class="mb-3">
+            <label class="form-label">{{ form.senha.label }}</label>
+            {{ form.senha }}
+        </div>
+        <div class="mb-3">
+            <label class="form-label">{{ form.cep.label }}</label>
+            {{ form.cep }}
+        </div>
+         <div class="row">
+            <div class="col-md-9 mb-3">
+                <label class="form-label">{{ form.logradouro.label }}</label>
+                {{ form.logradouro }}
+            </div>
+            <div class="col-md-3 mb-3">
+                <label class="form-label">{{ form.numero_residencia.label }}</label>
+                {{ form.numero_residencia }}
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">{{ form.bairro.label }}</label>
+            {{ form.bairro }}
+        </div>
+        <div class="row">
+            <div class="col-md-8 mb-3">
+                <label class="form-label">{{ form.localidade.label }}</label>
+                {{ form.localidade }}
+            </div>
+            <div class="col-md-4 mb-3">
+                <label class="form-label">{{ form.uf.label }}</label>
+                {{ form.uf }}
+            </div>
+        </div>
 
+        <div class="d-grid">
+            <button type="submit" class="btn btn-primary-custom btn-lg">Cadastrar</button>
+        </div>
+    </form>
+
+    <p class="mt-4 text-center">
+        Já tem uma conta?
+        <a href="{% url 'login' %}">Faça o login</a>
+    </p>
+</div>
+
+<style>
+/* Add some spacing and style to the form fields rendered by Django */
+.form-container input {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529; /* Default Bootstrap body color */
+    background-color: #f8f9fa; /* Default Bootstrap body background */
+    background-clip: padding-box;
+    border: 1px solid #dee2e6; /* Default Bootstrap border color */
+    border-radius: .375rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+</style>
 {% endblock %}
